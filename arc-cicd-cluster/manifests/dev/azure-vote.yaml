@@ -19,7 +19,7 @@ spec:
   - port: 80
   selector:
     app: azure-vote-front
-  type: ClusterIP
+  type: LoadBalancer
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -40,7 +40,7 @@ spec:
       - env:
         - name: ALLOW_EMPTY_PASSWORD
           value: "yes"
-        image: gitops2acr.azurecr.io/azvote/azure-vote-back:fd2dd5225705ff97bcb9d1912dfbe6572445927b
+        image: gitops2acr.azurecr.io/azvote/azure-vote-back:310fd76854125a9cf25e279f26dbd80ec7621704
         name: azure-vote-back
         ports:
         - containerPort: 6379
@@ -67,7 +67,7 @@ spec:
       - env:
         - name: REDIS
           value: azure-vote-back
-        image: gitops2acr.azurecr.io/azvote/azure-vote-front:fd2dd5225705ff97bcb9d1912dfbe6572445927b
+        image: gitops2acr.azurecr.io/azvote/azure-vote-front:310fd76854125a9cf25e279f26dbd80ec7621704
         name: azure-vote-front
         ports:
         - containerPort: 80
