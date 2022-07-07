@@ -5,8 +5,8 @@ namespace: dev
 
 images:
   - name: gitops2acr.azurecr.io/azvote/azure-vote-front
-    newTag: cda6c730cbbf47dfba790a7f49cf4323c85e38bc
+    newTag: cf101e4654d061c271866c8df3f7e4ea7d248746
   - name: gitops2acr.azurecr.io/azvote/azure-vote-back
-    newTag: cda6c730cbbf47dfba790a7f49cf4323c85e38bc
+    newTag: cf101e4654d061c271866c8df3f7e4ea7d248746
 resources:
   - manifests.yaml
