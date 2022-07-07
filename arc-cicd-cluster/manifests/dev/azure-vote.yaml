@@ -40,7 +40,7 @@ spec:
       - env:
         - name: ALLOW_EMPTY_PASSWORD
           value: "yes"
-        image: gitops2acr.azurecr.io/azvote/azure-vote-back:cda6c730cbbf47dfba790a7f49cf4323c85e38bc
+        image: gitops2acr.azurecr.io/azvote/azure-vote-back:cf101e4654d061c271866c8df3f7e4ea7d248746
         name: azure-vote-back
         ports:
         - containerPort: 6379
@@ -67,7 +67,7 @@ spec:
       - env:
         - name: REDIS
           value: azure-vote-back
-        image: gitops2acr.azurecr.io/azvote/azure-vote-front:cda6c730cbbf47dfba790a7f49cf4323c85e38bc
+        image: gitops2acr.azurecr.io/azvote/azure-vote-front:cf101e4654d061c271866c8df3f7e4ea7d248746
         name: azure-vote-front
         ports:
         - containerPort: 80
